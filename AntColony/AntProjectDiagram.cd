@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="SOFT152Steering.AntNest">
+    <Position X="10.75" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AntNest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SOFT152Steering.AntFoodForm">
+    <Position X="5.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAYmkAAABGAAACAApASRhAAWCAAAEARAQCQAAAAAQAA=</HashCode>
+      <FileName>AntFoodForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SOFT152Steering.FoodPile">
+    <Position X="14" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>FoodPile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SOFT152Steering.AntAgent">
+    <Position X="0.5" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAMgkBJAAQAAgAAAAAgBQAoAgIAIQAAFADIADAAE=</HashCode>
+      <FileName>AntAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

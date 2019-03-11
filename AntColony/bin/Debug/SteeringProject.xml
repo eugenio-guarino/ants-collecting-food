@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SteeringProject</name>
+    </assembly>
+    <members>
+        <member name="P:SOFT152Steering.AntAgent.AgentSpeed">
+            <summary>
+            The speed of the agent as used in all three movment methods 
+            Ideal value depends on timer tick interval and realistic motion of
+            agents needed. Suggest though in range 0 ... 2
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.ApproachRadius">
+            <summary>
+            If the agent is using the the ApproachAgent() method, this property defines
+            at what point the agent will reduce the speed of approach to miminic a 
+            more relistic approach behaviour
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.WanderLimits">
+            <summary>
+            Property defines how 'random' the agent movement is whilst 
+            the agent is using the Wander() method
+            Suggest range of WanderLimits is 0 ... 1
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.ShouldStayInWorldBounds">
+            <summary>
+            Used in conjunction worldBounds to determine if
+            the agents position will stay within the world bounds 
+            </summary>
+        </member>
+        <member name="F:SOFT152Steering.AntAgent.agentPosition">
+            <summary>
+            Current postion of the agent, updated by the three
+            movment methods
+            </summary>
+        </member>
+        <member name="F:SOFT152Steering.AntAgent.wanderPosition">
+            <summary>
+            used in conjunction with the Wander() method
+            to detemin the next position an agent should be in 
+            Should remain a private field and do not edit within this class
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.previousAntAgentPosition">
+            <summary>
+            this stores the previous position of the agent and it's
+            used only by the 'robber' ant to come back to the last position
+            he saw the ant that it stoled the food from
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.previousFoodPilePosition">
+            <summary>
+            Used by the regular ants, this is the vector that allows the ants
+            to come back to the location where the food is depleted and check if
+            there's something left.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isCloseToAnt">
+            <summary>
+            this bool is set only if the specific ant is close to another ant
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isCloseToNest">
+            <summary>
+            If this boolean is set to true it means that the 'regular'
+            ant is close to his nest and vice vers if false.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isCloseToFood">
+            <summary>
+            If the 'regular' ant is close to the food, then this will be set to true,
+            if it's not, it will be set to false.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isAntLocationKnown">
+            <summary>
+            The boolean below is used by the 'robber' ant to come back to the location of the 
+            ant it stole the food from. It is used in conjunction with the previousAntAgentPosition
+            vector.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isFoodKnown">
+            <summary>
+            it will be set to true if the ant knows where the food is/was. 
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isCarrying">
+            <summary>
+            If the ants has got or stolen food it will be set to true. This boolean also determines
+            wether the little piece of food carried should be drawn or not.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.isNestKnown">
+            <summary>
+            The boolean is used by the 'regular' ants and it will be set to true if they know the
+            position of the nest and to false if they don't.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.foodClosest">
+            <summary>
+            This int stores the index of the closest food to the ant.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.nestClosest">
+            <summary>
+            This int stores the index of the closest nest to the ant.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.closestAnt">
+            <summary>
+            This int stores the index of the closest ant to the another ant.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.AntAgent.Forgetfulness">
+            <summary>
+            This int determines how forgetful an ant is.
+            </summary>
+        </member>
+        <member name="F:SOFT152Steering.AntAgent.worldBounds">
+            <summary>
+            The size of the world the agent lives on as a Rectangle object.
+            Used in conjunction with ShouldStayInWorldBounds, which if true
+            will mean the agents position will be kept within the world bounds 
+            (i.e. the  world width or the world height)
+            </summary>
+        </member>
+        <member name="F:SOFT152Steering.AntAgent.randomNumberGenerator">
+            <summary>
+            The random object passed to the agent. 
+            Used only in the Wander() method to generate a 
+            random direction to move in
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntAgent.InitialiseAgent">
+            <summary>
+            Initialises the Agents various fields
+            with default values
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntAgent.Approach(SOFT152SteeringLibrary.SOFT152Vector)">
+            <summary>
+            Causes the agent to make one step towards the object at objectPosition
+            The speed of approach will reduce one this agent is within
+            an ApproachRadius of the objectPosition
+            </summary>
+            <param name="agentToApproach"></param>
+        </member>
+        <member name="M:SOFT152Steering.AntAgent.Wander">
+            <summary>
+            Causes the agent to make one random step.
+            The size of the step determined by the value of WanderLimits
+            and the agents speed
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.#ctor">
+            <summary>
+            This is the initial method called at the start of the program. Here, the list for the food
+            and nests are created. 
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.CreateAnts">
+            <summary>
+            this method creates the ants and put them into their lists. Thanks to the for-loops inside
+            we can set the amount of ants that will wander on the graphic panel.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+            timer_Tick is the main method of AntFoodForm. It is where all the
+            behaviours of the ants are. It contains many for-loops that set 
+            the booleans related to the movements of the ants.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.AskLocations(System.Int32)">
+            <summary>
+            The method below is used by the 'civilian' ants to ask for locations. If the ant it's close to another ant
+            and doesn't know where the food is, but the other does, the "isFoodKnown" boolean will be set to true and thus
+            the information is passed. Same with the location of the nests.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.PickUpFood(System.Int32)">
+            <summary>
+            The method below is used by the 'civilian' ants to pick up the food from the FoodPile.
+            Each time they pick up the food, the quantity of the food pile will decrease and the 
+            "isCarrying" and "isFoodKnown" booleans will be both set to true. When the quantity of
+            the food is equal to 0, the EraseFood method will be called.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.StealFood(System.Int32)">
+            <summary>
+            This is the method used by the 'robber' ants to steal the food from the 'civilian' ants.
+            When the 'robber' ant is in close proximity of a 'civilian' ant, the boolean "isCarrying"
+            will be set to true for the 'robber' ant and to false for the 'civilian' ant.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.DeleteFood(System.Int32)">
+            <summary>
+            Thanks to this method we can erase the food from the background image and remove it from the list.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.DrawDoubleBuffering">
+            <summary>
+            Draws the ants and any stationary objects using 'double buffering', a technique that 
+            prevents flickering. In this method, all the graphic aspects of the program are handled by using several
+            foreach loops.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.resetButton_Click(System.Object,System.EventArgs)">
+            <summary>
+            With this event handler is possible to reset the program without turning it off and on
+            back again. It deletes the old lists and create new ones. All nests and food piles will
+            be lost and the ants will not longer carry anything.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.drawingPanel_MouseClick(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            This event handler is used to determine the item you're placing.
+            </summary>
+        </member>
+        <member name="F:SOFT152Steering.AntFoodForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SOFT152Steering.AntFoodForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:SOFT152Steering.AntNest.nestPosition">
+            <summary>
+            This vector determines the position of the nest.
+            </summary>
+        </member>
+        <member name="M:SOFT152Steering.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:SOFT152Steering.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SOFT152Steering.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
