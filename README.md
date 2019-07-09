@@ -1,2 +1,12 @@
 # ants-collecting-food
-In the domain of Artificial Life, the behaviour of social insects has been used to study how simple creatures can be used to solve complex problems.
+
+## General info
+A WinForm application written in C# that allows you to manage ant colonies that forage and deplete the food you place on the screen. Started as a University Project, I am planning to further develop it to include new cool features!
+	
+## Technologies
+The application is created with:
+* Visual Studio
+* Steering Library provided by the University of Plymouth
+
+## Setup
+You should install you need the latest version of Visual Studio to run this application.
