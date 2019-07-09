@@ -5,7 +5,7 @@ A WinForm application written in C# that allows you to manage ant colonies that 
 	
 ## Technologies
 The application is created with:
-* Visual Studio
+* C#
 * Steering Library provided by the University of Plymouth
 
 ## Setup
