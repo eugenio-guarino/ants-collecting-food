@@ -76,7 +76,7 @@ namespace SOFT152Steering
 
             //The loop below is used to create the 'civilian' ants.
 
-            for (int i = 0; i < 200; i++)
+            for (int i = 0; i < 700; i++)
             {
                 int X = Convert.ToInt32(randomGenerator.Next(0, drawingPanel.Width - 1));
                 int Y = Convert.ToInt32(randomGenerator.Next(0, drawingPanel.Height - 1));
@@ -86,7 +86,7 @@ namespace SOFT152Steering
 
             //The loop below creates the 'robber' ants.
 
-            for (int i = 0; i < 75; i++)
+            for (int i = 0; i < 0; i++)
             {
                 int X = Convert.ToInt32(randomGenerator.Next(0, drawingPanel.Width - 1));
                 int Y = Convert.ToInt32(randomGenerator.Next(0, drawingPanel.Height - 1));
@@ -461,7 +461,7 @@ namespace SOFT152Steering
 
             float antSize;
 
-            antSize = 2.8f;
+            antSize = 5f;
 
             using (Graphics backgroundGraphics = Graphics.FromImage(backgroundImage))
             {

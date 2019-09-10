@@ -16,7 +16,7 @@ namespace SOFT152Steering
         public FoodPile(SOFT152Vector position)
         {
             //the units of the food object
-            Quantity = 250;
+            Quantity = 30;
 
             //the position of the food object
             foodPosition = new SOFT152Vector(position.X, position.Y);

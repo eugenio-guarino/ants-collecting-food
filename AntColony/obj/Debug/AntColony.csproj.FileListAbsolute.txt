@@ -1,0 +1,13 @@
+C:\Users\user\Desktop\ants-collecting-food\AntColony\bin\Debug\SteeringProject.exe.config
+C:\Users\user\Desktop\ants-collecting-food\AntColony\bin\Debug\SteeringProject.xml
+C:\Users\user\Desktop\ants-collecting-food\AntColony\bin\Debug\SteeringProject.exe
+C:\Users\user\Desktop\ants-collecting-food\AntColony\bin\Debug\SteeringProject.pdb
+C:\Users\user\Desktop\ants-collecting-food\AntColony\bin\Debug\SteeringLibrary.dll
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\AntColony.csprojAssemblyReference.cache
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\SteeringProject.Properties.Resources.resources
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\SOFT152Steering.AntFoodForm.resources
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\AntColony.csproj.GenerateResource.cache
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\AntColony.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\AntColony.csproj.CopyComplete
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\SteeringProject.exe
+C:\Users\user\Desktop\ants-collecting-food\AntColony\obj\Debug\SteeringProject.pdb
